@@ -21,9 +21,10 @@ body {
 	font-family: $font;
 	background: url('../../assets/images/bg.jpg') no-repeat center;
 	background-size: cover;
+	background-attachment: fixed;
 
 	&::before {
-		@include pos($l:0, $r: 0, $t: 0, $b: 0);
+		@include pos(fixed, $l:0, $r: 0, $t: 0, $b: 0);
 		content: '';
 		background: $grey;
 		opacity: .6;

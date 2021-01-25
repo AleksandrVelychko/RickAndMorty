@@ -1,0 +1,15 @@
+@import "../../../scss/styles.scss";
+
+.window {
+    position: relative;
+
+    &__close {
+        @include pos($r: 0, $t: 0);
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}

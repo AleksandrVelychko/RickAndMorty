@@ -1,12 +1,25 @@
+<mat-progress-spinner mode="indeterminate" diameter="40" *ngIf="loading">
+</mat-progress-spinner>
+
 <h1 class="title">Characters</h1>
 
-<div class="cadr-wrapper">
+<div class="pages">
+    <mat-paginator [length]="listLenght" [pageSize]="itemsPerPage" (page)="getCharacters($event.pageIndex + 1)">
+    </mat-paginator>
+</div>
+
+<div class="card-wrapper">
     <mat-card *ngFor="let person of characters" class="card">
         <mat-card-header>
             <mat-card-title>
                 {{person.name | uppercase}}
             </mat-card-title>
             <mat-card-subtitle>
+                <span class="indicator" [ngClass]="{
+                                        'alive': person.status === statusEnum.Alive, 
+                                        'dead': person.status === statusEnum.Dead
+                                      }">
+                </span>
                 {{person.status}} - {{person.species}}
             </mat-card-subtitle>
         </mat-card-header>

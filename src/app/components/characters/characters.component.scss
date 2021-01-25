@@ -1,0 +1,30 @@
+@import '../../../scss/base/_variables';
+
+.card {
+    background: lighten($grey, 10%);
+    color: #ffffff;
+    width: 30%;
+    font-family: $font;
+    margin-bottom: 20px;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    mat-card-subtitle {
+        color: #fff;
+    }
+
+    &__btn {
+        background: $blue;
+        color: #fff;
+        font-family: $font;
+        text-transform: uppercase;
+    }
+
+    .mat-card-actions {
+        text-align: center;
+    }
+}

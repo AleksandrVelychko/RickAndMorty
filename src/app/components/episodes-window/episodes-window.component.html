@@ -1,0 +1,10 @@
+<div class="window">
+
+    <div class="window__close">
+        <mat-icon (click)="onClose()">close</mat-icon>
+    </div>
+
+    <p class="window__item" *ngFor="let item of list">
+        {{item.episode}}: {{item.name}}
+    </p>
+</div>
